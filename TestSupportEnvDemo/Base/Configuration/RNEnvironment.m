@@ -7,7 +7,6 @@
 //
 
 #import "RNEnvironment.h"
-
 @interface RNEnvironment()
 
 @property (nonatomic, copy) NSString *desc;
@@ -44,6 +43,7 @@ IMP_SINGLETON(RNEnvironment);
         }];
         NSLog(@"%@", [NSString stringWithFormat:@"Start environment configuration\n*************** %@ ***************\n%@****************************************\n", [self cnEnvironmentNameWithEnName:_environmentName], envars]);
     }
+    
     return self;
 }
 

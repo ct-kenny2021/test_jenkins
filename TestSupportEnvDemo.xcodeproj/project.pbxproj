@@ -35,6 +35,7 @@
 		26AE1635268B01A800E573D2 /* environment_TEST.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26AE1630268B01A800E573D2 /* environment_TEST.plist */; };
 		26AE1636268B01A800E573D2 /* environment_DEV.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26AE1631268B01A800E573D2 /* environment_DEV.plist */; };
 		26AE1637268B01A800E573D2 /* RNEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AE1632268B01A800E573D2 /* RNEnvironment.m */; };
+		26EA2EB8269FE0F700338526 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EA2EB7269FE0F600338526 /* Utils.m */; };
 		763DBE09FFE0967C1BA54743 /* libPods-TestSupportEnvDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E27DE239A439E9FFCF50501 /* libPods-TestSupportEnvDemoUITests.a */; };
 		86CB60E698015A5B8BEB5353 /* libPods-TestSupportEnvDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B8D344E99F2D60338E3DE25 /* libPods-TestSupportEnvDemo.a */; };
 /* End PBXBuildFile section */
@@ -77,8 +78,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03892E6A9EEF4DA3B15E2E4E /* Pods-TestSupportEnvDemoTests.pre.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemoTests.pre.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemoTests/Pods-TestSupportEnvDemoTests.pre.xcconfig"; sourceTree = "<group>"; };
 		169A6CED26CE9A7EC0935C6D /* Pods-TestSupportEnvDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemo/Pods-TestSupportEnvDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		1FC199F049A7FA65D20A33FC /* Pods-TestSupportEnvDemoUITests.prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemoUITests.prod.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemoUITests/Pods-TestSupportEnvDemoUITests.prod.xcconfig"; sourceTree = "<group>"; };
+		2406B867D4816E1A76A238D0 /* Pods-TestSupportEnvDemo.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemo.test.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemo/Pods-TestSupportEnvDemo.test.xcconfig"; sourceTree = "<group>"; };
+		26184A93268D8A3400205016 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		265A800B268B14090057934B /* environment_preprocess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = environment_preprocess.h; sourceTree = "<group>"; };
+		2665346026A9183700093C85 /* TestSupportEnvDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestSupportEnvDemo.entitlements; sourceTree = "<group>"; };
 		26AE15F3268AFE1800E573D2 /* TestSupportEnvDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSupportEnvDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26AE15F6268AFE1800E573D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		26AE15F7268AFE1800E573D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,14 +114,25 @@
 		26C588A8268C675C006B2B37 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		26C588AA268C675C006B2B37 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		26C58908268C6793006B2B37 /* AppleScriptObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptObjC.framework; path = Library/Frameworks/AppleScriptObjC.framework; sourceTree = DEVELOPER_DIR; };
+		26EA2EB6269FE0F600338526 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		26EA2EB7269FE0F600338526 /* Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		2D50A38F44D648E3C43A4E3F /* Pods-TestSupportEnvDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemo/Pods-TestSupportEnvDemo.release.xcconfig"; sourceTree = "<group>"; };
+		3D3180A8B3DCFC9910C954BA /* Pods-TestSupportEnvDemoUITests.pre.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemoUITests.pre.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemoUITests/Pods-TestSupportEnvDemoUITests.pre.xcconfig"; sourceTree = "<group>"; };
 		3F5F38EC3457ACF4D4ED3B7D /* Pods-TestSupportEnvDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemoUITests/Pods-TestSupportEnvDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		40CB97913C2028EB78A4F7E2 /* Pods-TestSupportEnvDemoUITests.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemoUITests.test.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemoUITests/Pods-TestSupportEnvDemoUITests.test.xcconfig"; sourceTree = "<group>"; };
+		4F9CC84E1B77C3F2CC112B28 /* Pods-TestSupportEnvDemoUITests.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemoUITests.dev.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemoUITests/Pods-TestSupportEnvDemoUITests.dev.xcconfig"; sourceTree = "<group>"; };
 		5733B98E75BAAFC8917BBA3E /* Pods-TestSupportEnvDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemoTests/Pods-TestSupportEnvDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		662871BE735E22A8CD3BAD9E /* Pods-TestSupportEnvDemo.prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemo.prod.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemo/Pods-TestSupportEnvDemo.prod.xcconfig"; sourceTree = "<group>"; };
+		66E46A822CC0C520DF83DA1D /* Pods-TestSupportEnvDemoTests.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemoTests.dev.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemoTests/Pods-TestSupportEnvDemoTests.dev.xcconfig"; sourceTree = "<group>"; };
+		6939867C5C433BE80A3C3B1B /* Pods-TestSupportEnvDemo.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemo.dev.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemo/Pods-TestSupportEnvDemo.dev.xcconfig"; sourceTree = "<group>"; };
 		6B8D344E99F2D60338E3DE25 /* libPods-TestSupportEnvDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestSupportEnvDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C72DD3E02B625BA2D720AC /* Pods-TestSupportEnvDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemoUITests/Pods-TestSupportEnvDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9D3AC906E9B5B3226D388534 /* Pods-TestSupportEnvDemo.pre.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemo.pre.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemo/Pods-TestSupportEnvDemo.pre.xcconfig"; sourceTree = "<group>"; };
 		9E27DE239A439E9FFCF50501 /* libPods-TestSupportEnvDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestSupportEnvDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D8CAE55BA3EAAFA4D08446 /* libPods-TestSupportEnvDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestSupportEnvDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC3B98CFE6AE14E0F7FAB6E /* Pods-TestSupportEnvDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemoTests/Pods-TestSupportEnvDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E41F89A1108800DC867F80F5 /* Pods-TestSupportEnvDemoTests.test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemoTests.test.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemoTests/Pods-TestSupportEnvDemoTests.test.xcconfig"; sourceTree = "<group>"; };
+		E7BAFD047950ED13BDA82422 /* Pods-TestSupportEnvDemoTests.prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSupportEnvDemoTests.prod.xcconfig"; path = "Pods/Target Support Files/Pods-TestSupportEnvDemoTests/Pods-TestSupportEnvDemoTests.prod.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +196,8 @@
 		26AE15F5268AFE1800E573D2 /* TestSupportEnvDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2665346026A9183700093C85 /* TestSupportEnvDemo.entitlements */,
+				26184A93268D8A3400205016 /* PrefixHeader.pch */,
 				265A800A268B13130057934B /* Application */,
 				26AE162B268B017E00E573D2 /* Base */,
 				26AE15F6268AFE1800E573D2 /* AppDelegate.h */,
@@ -189,6 +208,8 @@
 				26AE1602268AFE1B00E573D2 /* Assets.xcassets */,
 				26AE1604268AFE1B00E573D2 /* LaunchScreen.storyboard */,
 				26AE1608268AFE1B00E573D2 /* main.m */,
+				26EA2EB6269FE0F600338526 /* Utils.h */,
+				26EA2EB7269FE0F600338526 /* Utils.m */,
 			);
 			path = TestSupportEnvDemo;
 			sourceTree = "<group>";
@@ -227,8 +248,8 @@
 				26AE1640268B020900E573D2 /* RNMacros.h */,
 				26AE162F268B01A800E573D2 /* environment.plist */,
 				26AE1631268B01A800E573D2 /* environment_DEV.plist */,
-				26AE162E268B01A800E573D2 /* environment_PROD.plist */,
 				26AE1630268B01A800E573D2 /* environment_TEST.plist */,
+				26AE162E268B01A800E573D2 /* environment_PROD.plist */,
 				26AE162D268B01A800E573D2 /* RNEnvironment.h */,
 				26AE1632268B01A800E573D2 /* RNEnvironment.m */,
 			);
@@ -259,6 +280,18 @@
 				5733B98E75BAAFC8917BBA3E /* Pods-TestSupportEnvDemoTests.release.xcconfig */,
 				3F5F38EC3457ACF4D4ED3B7D /* Pods-TestSupportEnvDemoUITests.debug.xcconfig */,
 				73C72DD3E02B625BA2D720AC /* Pods-TestSupportEnvDemoUITests.release.xcconfig */,
+				6939867C5C433BE80A3C3B1B /* Pods-TestSupportEnvDemo.dev.xcconfig */,
+				2406B867D4816E1A76A238D0 /* Pods-TestSupportEnvDemo.test.xcconfig */,
+				9D3AC906E9B5B3226D388534 /* Pods-TestSupportEnvDemo.pre.xcconfig */,
+				662871BE735E22A8CD3BAD9E /* Pods-TestSupportEnvDemo.prod.xcconfig */,
+				66E46A822CC0C520DF83DA1D /* Pods-TestSupportEnvDemoTests.dev.xcconfig */,
+				E41F89A1108800DC867F80F5 /* Pods-TestSupportEnvDemoTests.test.xcconfig */,
+				03892E6A9EEF4DA3B15E2E4E /* Pods-TestSupportEnvDemoTests.pre.xcconfig */,
+				E7BAFD047950ED13BDA82422 /* Pods-TestSupportEnvDemoTests.prod.xcconfig */,
+				4F9CC84E1B77C3F2CC112B28 /* Pods-TestSupportEnvDemoUITests.dev.xcconfig */,
+				40CB97913C2028EB78A4F7E2 /* Pods-TestSupportEnvDemoUITests.test.xcconfig */,
+				3D3180A8B3DCFC9910C954BA /* Pods-TestSupportEnvDemoUITests.pre.xcconfig */,
+				1FC199F049A7FA65D20A33FC /* Pods-TestSupportEnvDemoUITests.prod.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -495,6 +528,7 @@
 				26AE15FE268AFE1800E573D2 /* ViewController.m in Sources */,
 				26AE15F8268AFE1800E573D2 /* AppDelegate.m in Sources */,
 				26AE1609268AFE1B00E573D2 /* main.m in Sources */,
+				26EA2EB8269FE0F700338526 /* Utils.m in Sources */,
 				26AE1637268B01A800E573D2 /* RNEnvironment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -607,9 +641,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/TestSupportEnvDemo/Base/environment_preprocess.h";
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				RN_ENVIRONMENT = DEV;
 				SDKROOT = iphoneos;
@@ -662,9 +699,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/TestSupportEnvDemo/Base/environment_preprocess.h";
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				RN_ENVIRONMENT = PROD;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -673,21 +713,31 @@
 		};
 		26AE1623268AFE1B00E573D2 /* DEV */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 169A6CED26CE9A7EC0935C6D /* Pods-TestSupportEnvDemo.debug.xcconfig */;
+			baseConfigurationReference = 6939867C5C433BE80A3C3B1B /* Pods-TestSupportEnvDemo.dev.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TestSupportEnvDemo/TestSupportEnvDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9M8L3BDKU4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TestSupportEnvDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = "TestSupportEnvDemo/Base/TestSupportEnvDemo-Info.plist";
+				INFOPLIST_PREFIX_HEADER = "$(inherited)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MODULEMAP_FILE = "$(SRCROOT)/TestSupportEnvDemo/TestSupportEnvDemo.modulemap";
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kenny.TestSupportEnvDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kenny.pushdemo;
+				PRODUCT_NAME = TestSupportEnvDemo;
+				PROVISIONING_PROFILE_SPECIFIER = dev_test;
 				RN_ENVIRONMENT = DEV;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -695,21 +745,31 @@
 		};
 		26AE1624268AFE1B00E573D2 /* PROD */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D50A38F44D648E3C43A4E3F /* Pods-TestSupportEnvDemo.release.xcconfig */;
+			baseConfigurationReference = 662871BE735E22A8CD3BAD9E /* Pods-TestSupportEnvDemo.prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TestSupportEnvDemo/TestSupportEnvDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9M8L3BDKU4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TestSupportEnvDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = "TestSupportEnvDemo/Base/TestSupportEnvDemo-Info.plist";
+				INFOPLIST_PREFIX_HEADER = "$(inherited)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MODULEMAP_FILE = "$(SRCROOT)/TestSupportEnvDemo/TestSupportEnvDemo.modulemap";
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kenny.TestSupportEnvDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kenny.pushdemo;
+				PRODUCT_NAME = TestSupportEnvDemo;
+				PROVISIONING_PROFILE_SPECIFIER = dev_test;
 				RN_ENVIRONMENT = PROD;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -717,7 +777,7 @@
 		};
 		26AE1626268AFE1B00E573D2 /* DEV */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABC3B98CFE6AE14E0F7FAB6E /* Pods-TestSupportEnvDemoTests.debug.xcconfig */;
+			baseConfigurationReference = 66E46A822CC0C520DF83DA1D /* Pods-TestSupportEnvDemoTests.dev.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -738,7 +798,7 @@
 		};
 		26AE1627268AFE1B00E573D2 /* PROD */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5733B98E75BAAFC8917BBA3E /* Pods-TestSupportEnvDemoTests.release.xcconfig */;
+			baseConfigurationReference = E7BAFD047950ED13BDA82422 /* Pods-TestSupportEnvDemoTests.prod.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -759,7 +819,7 @@
 		};
 		26AE1629268AFE1B00E573D2 /* DEV */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F5F38EC3457ACF4D4ED3B7D /* Pods-TestSupportEnvDemoUITests.debug.xcconfig */;
+			baseConfigurationReference = 4F9CC84E1B77C3F2CC112B28 /* Pods-TestSupportEnvDemoUITests.dev.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9M8L3BDKU4;
@@ -778,7 +838,7 @@
 		};
 		26AE162A268AFE1B00E573D2 /* PROD */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 73C72DD3E02B625BA2D720AC /* Pods-TestSupportEnvDemoUITests.release.xcconfig */;
+			baseConfigurationReference = 1FC199F049A7FA65D20A33FC /* Pods-TestSupportEnvDemoUITests.prod.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9M8L3BDKU4;
@@ -847,9 +907,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/TestSupportEnvDemo/Base/environment_preprocess.h";
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				RN_ENVIRONMENT = TEST;
 				SDKROOT = iphoneos;
@@ -858,21 +921,31 @@
 		};
 		26AE1639268B01B900E573D2 /* TEST */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 169A6CED26CE9A7EC0935C6D /* Pods-TestSupportEnvDemo.debug.xcconfig */;
+			baseConfigurationReference = 2406B867D4816E1A76A238D0 /* Pods-TestSupportEnvDemo.test.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TestSupportEnvDemo/TestSupportEnvDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9M8L3BDKU4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TestSupportEnvDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = "TestSupportEnvDemo/Base/TestSupportEnvDemo-Info.plist";
+				INFOPLIST_PREFIX_HEADER = "$(inherited)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MODULEMAP_FILE = "$(SRCROOT)/TestSupportEnvDemo/TestSupportEnvDemo.modulemap";
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kenny.TestSupportEnvDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kenny.pushdemo;
+				PRODUCT_NAME = TestSupportEnvDemo;
+				PROVISIONING_PROFILE_SPECIFIER = dev_test;
 				RN_ENVIRONMENT = TEST;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -880,7 +953,7 @@
 		};
 		26AE163A268B01B900E573D2 /* TEST */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABC3B98CFE6AE14E0F7FAB6E /* Pods-TestSupportEnvDemoTests.debug.xcconfig */;
+			baseConfigurationReference = E41F89A1108800DC867F80F5 /* Pods-TestSupportEnvDemoTests.test.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -901,7 +974,7 @@
 		};
 		26AE163B268B01B900E573D2 /* TEST */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F5F38EC3457ACF4D4ED3B7D /* Pods-TestSupportEnvDemoUITests.debug.xcconfig */;
+			baseConfigurationReference = 40CB97913C2028EB78A4F7E2 /* Pods-TestSupportEnvDemoUITests.test.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9M8L3BDKU4;
@@ -970,9 +1043,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_PREFIX_HEADER = "$(SRCROOT)/TestSupportEnvDemo/Base/environment_preprocess.h";
+				INFOPLIST_PREPROCESS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				RN_ENVIRONMENT = PRE;
 				SDKROOT = iphoneos;
@@ -981,21 +1057,31 @@
 		};
 		26AE163D268B01CB00E573D2 /* PRE */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 169A6CED26CE9A7EC0935C6D /* Pods-TestSupportEnvDemo.debug.xcconfig */;
+			baseConfigurationReference = 9D3AC906E9B5B3226D388534 /* Pods-TestSupportEnvDemo.pre.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = TestSupportEnvDemo/TestSupportEnvDemo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9M8L3BDKU4;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TestSupportEnvDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = "TestSupportEnvDemo/Base/TestSupportEnvDemo-Info.plist";
+				INFOPLIST_PREFIX_HEADER = "$(inherited)";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MODULEMAP_FILE = "$(SRCROOT)/TestSupportEnvDemo/TestSupportEnvDemo.modulemap";
 				NEW_SETTING = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kenny.TestSupportEnvDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kenny.pushdemo;
+				PRODUCT_NAME = TestSupportEnvDemo;
+				PROVISIONING_PROFILE_SPECIFIER = dev_test;
 				RN_ENVIRONMENT = PRE;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1003,7 +1089,7 @@
 		};
 		26AE163E268B01CB00E573D2 /* PRE */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABC3B98CFE6AE14E0F7FAB6E /* Pods-TestSupportEnvDemoTests.debug.xcconfig */;
+			baseConfigurationReference = 03892E6A9EEF4DA3B15E2E4E /* Pods-TestSupportEnvDemoTests.pre.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -1024,7 +1110,7 @@
 		};
 		26AE163F268B01CB00E573D2 /* PRE */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3F5F38EC3457ACF4D4ED3B7D /* Pods-TestSupportEnvDemoUITests.debug.xcconfig */;
+			baseConfigurationReference = 3D3180A8B3DCFC9910C954BA /* Pods-TestSupportEnvDemoUITests.pre.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9M8L3BDKU4;

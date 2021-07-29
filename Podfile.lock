@@ -14,21 +14,29 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - JCore (2.3.4)
+  - JPush (3.3.6):
+    - JCore (< 3.0.0, >= 2.0.0)
   - Masonry (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking
+  - JPush
   - Masonry
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
+    - JCore
+    - JPush
     - Masonry
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  JCore: 8aa29dc57ba3730dd9fe7544ce1a4e1cbe221135
+  JPush: a401b946dcc76b37335422487201bc1ecc8dd296
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
-PODFILE CHECKSUM: 26949552f8ba4215f66ba388015f6d41250db916
+PODFILE CHECKSUM: d69c2f2c78bb30e9114759083b3449feaeed45a4
 
 COCOAPODS: 1.5.3

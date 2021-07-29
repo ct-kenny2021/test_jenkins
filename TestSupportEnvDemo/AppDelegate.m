@@ -6,8 +6,10 @@
 //
 
 #import "AppDelegate.h"
-#import "RNEnvironment.h"
-@interface AppDelegate ()
+#import "JPUSHService.h"
+#import <UserNotifications/UserNotifications.h>
+
+@interface AppDelegate ()<JPUSHRegisterDelegate>
 
 @end
 
@@ -15,7 +17,6 @@
  
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     RN_ENVIRONMENT_INIT;
 #ifdef PROD
     NSLog(@"PROD");
@@ -26,34 +27,75 @@
 #else
     NSLog(@"test");
 #endif
-//    01001011
-    //01010011
-    UInt8 mode = Hex2UInt8(@"53");
-    BOOL openMode = mode & 0x01; //开关
-    BOOL seasonMode = mode & 0x02; //冬暖键
-    BOOL energyMode = mode & 0x08; //节能模式
-    BOOL outdoorMode = mode & 0x10; //外出模式
-    BOOL timingMode = mode & 0x20; //预约模式
-    BOOL rapidHeatingMode = mode & 0x40; //快速采暖
+
+    if([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
+        if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+            UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+            [application registerUserNotificationSettings:settings];
+            [application registerForRemoteNotifications];
+        } else {
+            [application registerForRemoteNotificationTypes: UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge];
+        }
+    } else {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+         (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+    }
+    //【注册通知】通知回调代理（可选）
+//     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+//     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound|JPAuthorizationOptionProvidesAppNotificationSettings;
+//     [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+//
+//    [JPUSHService setupWithOption:launchOptions appKey:@"2da9723e0a28d39b3233151e" channel:nil apsForProduction:NO];
+//    NSSet *set = [NSSet setWithArray:@[@"123456789"]];
+//    [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
+//        if(resCode == 0)
+//        {
+//            // iOS10获取registrationID放到这里了, 可以存到缓存里, 用来标识用户单独发送推送
+//            NSLog(@"registrationID获取成功：%@",registrationID);
+////            [[NSUserDefaults standardUserDefaults] setObject:registrationID forKey:@"registrationID"];
+////            [[NSUserDefaults standardUserDefaults] synchronize];
+//        }
+//        else
+//        {
+//            NSLog(@"registrationID获取失败，code：%d",resCode);
+//        }
+//    }];
     return YES;
 }
 
-/** 十六进制字符串转字节数 */
-UInt8 Hex2UInt8(NSString *str) {
-    UInt8 byte = 0x00;
-    Hex2UInt8s(str, &byte);
-    return byte;
-}
-/** 十六进制字符串转字节数组 */
-void Hex2UInt8s(NSString *str, UInt8 *bytes) {
-    NSUInteger size = str.length;
-    NSData *data = [[str uppercaseString] dataUsingEncoding:NSASCIIStringEncoding];
-    UInt8 *buffer = (UInt8 *)[data bytes];
-    for (int i = 0, j = 0; j < size - 1; ++ i, j += 2) {
-        UInt8 a = buffer[j], b = buffer[j + 1];
-        UInt8 high = (a >= 'A') ? (a - 'A' + 10) : (a - '0' + 0);
-        UInt8 low = (b >= 'A') ? (b - 'A' + 10) : (b - '0' + 0);
-        bytes[i] = (high << 4 | low);
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    NSString *devToken2 = [[[[deviceToken description] stringByReplacingOccurrencesOfString:@"<" withString:@""] stringByReplacingOccurrencesOfString:@">" withString:@""] stringByReplacingOccurrencesOfString:@" " withString:@""];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 13.0) {
+        devToken2 = [self stringFromDeviceToken:deviceToken];
     }
+    
+//    [JPUSHService registerDeviceToken:deviceToken];
+}
+
+- (NSString *)stringFromDeviceToken:(NSData *)deviceToken {
+    NSUInteger length = deviceToken.length;
+    if (length == 0) {
+        return nil;
+    }
+    const unsigned char *buffer = deviceToken.bytes;
+    NSMutableString *hexString  = [NSMutableString stringWithCapacity:(length * 2)];
+    for (int i = 0; i < length; ++i) {
+        [hexString appendFormat:@"%02x", buffer[i]];
+    }
+    return [hexString copy];
+}
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    NSDictionary *apsInfo = [userInfo objectForKey:@"aps"];
+    NSLog(@"%@",apsInfo);
+//    printf("\nRemote Notification: %s", apsInfo);
+//
+//    [[RinnaiController sharedInstance] dismissKeyboard];
+//
+//    if (application.applicationState == UIApplicationStateActive) {
+//        [[PushServiceManager sharedInstance] processWithData:apsInfo];
+//    }else {
+//        [[PushServiceManager sharedInstance] processWithData:apsInfo];
+//    }
 }
 @end

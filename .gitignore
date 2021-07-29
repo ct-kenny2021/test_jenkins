@@ -2,6 +2,13 @@
 # Created by https://www.toptal.com/developers/gitignore/api/objective-c,swift,cocoapods
 # Edit at https://www.toptal.com/developers/gitignore?templates=objective-c,swift,cocoapods
 
+## Project releated
+environment.plist
+environment_preprocess.h 
+
+##
+.DS_Store
+
 ### CocoaPods ###
 ## CocoaPods GitIgnore Template
 

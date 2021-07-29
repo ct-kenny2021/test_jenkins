@@ -13,6 +13,7 @@ target 'TestSupportEnvDemo' do
     	}
 	pod 'Masonry'
 	pod 'AFNetworking'
+    	pod 'JPush'
   # Pods for TestSupportEnvDemo
 
   target 'TestSupportEnvDemoTests' do
